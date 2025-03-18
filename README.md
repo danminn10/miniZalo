@@ -1,6 +1,3 @@
-Dưới đây là bản cập nhật của README.md với các thông tin mới từ các file bạn đã cung cấp:
-
----
 
 # AppChat - Ứng dụng nhắn tin đơn giản
 
