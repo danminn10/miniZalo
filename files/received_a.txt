@@ -1,0 +1,67 @@
+CREATE TABLE Students (
+	student_id INT PRIMARY KEY AUTO_INCREMENT,
+	first_name VARCHAR(10),
+	last_name VARCHAR(10),
+	birth_date DATE,
+	class_id INT,
+	FOREIGN KEY (class_id) REFERENCES Classes(class_id),
+);
+CREATE TABLE Classes (
+	class_id INT PRIMARY KEY AUTO_INCREMENT,
+	class_name VARCHAR(10),
+);
+CREATE TABLE Subjects (
+	subject_id INT PRIMARY KEY AUTO_INCREMENT,
+	subject_name VARCHAR(10),
+);
+CREATE TABLE Scores (
+	score_id INT PRIMARY KEY AUTO_INCREMENT,
+	student_id INT,
+	subject_id INT,
+	score FLOAT,
+	FOREIGN (student_id) REFERENCES Students(student_id);
+	FOREIGN (SUBJECT_id) REFERENCES Subjects(subject_id);
+);
+INSERT INTO Classes (Class_name) VALUES ('Math'), ('Physics'), ('Chemistry');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

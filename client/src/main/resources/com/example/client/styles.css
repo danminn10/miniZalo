@@ -1,0 +1,94 @@
+.header-label {
+    -fx-font-size: 22px;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 0;
+}
+
+.button-login {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-pref-width: 150px;
+    -fx-cursor: hand;
+}
+
+.link-register {
+    -fx-text-fill: #3498db;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+GridPane, Label, TextField, PasswordField {
+    -fx-font-size: 14px;
+}
+
+Label {
+    -fx-text-fill: #2c3e50;
+}
+
+TextField, PasswordField {
+    -fx-pref-width: 200px;
+}
+
+
+/* Nút sidebar với nền trắng và bo tròn */
+.sidebar-icon-button {
+    -fx-background-color: white; /* Nền trắng */
+    -fx-background-radius: 15; /* Bo tròn góc nút */
+    -fx-padding: 10;
+    -fx-cursor: hand;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2); /* Đổ bóng nhẹ */
+    -fx-border-color: #d0d0d0;
+    -fx-border-width: 1;
+}
+
+.sidebar-icon-button:hover {
+    -fx-background-color: #f0f0f0; /* Màu nền nhạt hơn khi hover */
+}
+
+.sidebar-icon-button:pressed {
+    -fx-background-color: #e0e0e0; /* Màu nền tối hơn một chút khi ấn */
+}
+
+/* ListView của người dùng */
+.user-list {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #d0d0d0;
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 3);
+}
+
+.user-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.user-list .list-cell:hover {
+    -fx-background-color: #e8f0ff; /* Màu nền nhạt khi hover */
+    -fx-background-radius: 5;
+}
+
+.user-list .list-cell:focused {
+    -fx-background-color: #e0e7ff; /* Màu nhạt hơn khi focus */
+}
+
+.user-list .list-cell:selected {
+    -fx-background-color: #b3d1ff; /* Màu xanh nhạt hơn khi chọn */
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+/* Tiêu đề bên trên danh sách người dùng */
+.user-list-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: #0078d7;
+    -fx-font-weight: bold;
+}

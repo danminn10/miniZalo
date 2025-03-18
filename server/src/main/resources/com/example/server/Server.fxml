@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.server.controller.ServerController">
+    <children>
+        <VBox spacing="10" alignment="CENTER" prefWidth="500" prefHeight="400">
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="IP Address:" />
+                <TextField fx:id="ipField" text="127.0.0.1" prefWidth="150" />
+
+                <Label text="Port:" />
+                <TextField fx:id="portField" text="12345" prefWidth="80" />
+
+                <Button fx:id="startButton" text="Start Server" onAction="#handleStartServer" />
+            </HBox>
+
+            <Label text="Connected Clients:" />
+            <ListView fx:id="clientsListView" prefHeight="100" />
+
+            <Label text="Server Log:" />
+            <TextArea fx:id="logTextArea" prefHeight="200" wrapText="true" editable="false" />
+        </VBox>
+    </children>
+</AnchorPane>

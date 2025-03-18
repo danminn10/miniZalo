@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.client.controller.LoginController">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+
+    <children>
+        <VBox alignment="CENTER" spacing="15" prefWidth="400" prefHeight="350" AnchorPane.topAnchor="30.0">
+            <!-- Header Label -->
+            <Label text="Welcome to AppChat" styleClass="header-label" />
+
+            <!-- Form Fields -->
+            <GridPane hgap="10" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" minWidth="100"/>
+                    <ColumnConstraints halignment="LEFT" minWidth="200"/>
+                </columnConstraints>
+
+                <!-- Username Label and Input -->
+                <Label text="Username:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="usernameField" promptText="Enter your username" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                <!-- Password Label and Input -->
+                <Label text="Password:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <PasswordField fx:id="passwordField" promptText="Enter your password" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+            </GridPane>
+
+            <!-- Login Button -->
+            <Button fx:id="loginButton" text="Login" onAction="#handleLogin" styleClass="button-login" />
+
+            <!-- Register Link -->
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="Chưa có tài khoản?" />
+                <Hyperlink text="Đăng ký tại đây" onAction="#switchToRegister" styleClass="link-register"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

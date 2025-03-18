@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.client.controller.RegisterController">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+
+    <children>
+        <VBox alignment="CENTER" spacing="15" prefWidth="400" prefHeight="400" AnchorPane.topAnchor="30.0">
+            <!-- Header Label -->
+            <Label text="Create a New Account" styleClass="header-label" />
+
+            <!-- Form Fields -->
+            <GridPane hgap="10" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" minWidth="100"/>
+                    <ColumnConstraints halignment="LEFT" minWidth="200"/>
+                </columnConstraints>
+
+                <!-- Fullname Label and Input -->
+                <Label text="Fullname:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="fullnameField" promptText="Enter your fullname" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                <!-- Username Label and Input -->
+                <Label text="Username:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <TextField fx:id="usernameField" promptText="Enter your username" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                <!-- Password Label and Input -->
+                <Label text="Password:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <PasswordField fx:id="passwordField" promptText="Enter your password" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+            </GridPane>
+
+            <!-- Register Button -->
+            <Button fx:id="registerButton" text="Register" onAction="#handleRegister" styleClass="button-login" />
+
+            <!-- Login Link -->
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="Đã có tài khoản?" />
+                <Hyperlink text="Đăng nhập ở đây" onAction="#switchToLogin" styleClass="link-register"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

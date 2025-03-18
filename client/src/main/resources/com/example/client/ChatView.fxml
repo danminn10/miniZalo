@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.client.controller.ChatController" style="-fx-padding: 10;">
+    <!-- Header của cuộc trò chuyện -->
+    <Label fx:id="chatWithLabel" text="Chat với: [Tên người dùng]" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <!-- Danh sách tin nhắn cũ -->
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+        <VBox fx:id="messageContainer" spacing="5" style="-fx-padding: 10;">
+            <!-- Các tin nhắn sẽ được thêm vào đây bằng mã Java -->
+        </VBox>
+    </ScrollPane>
+
+    <!-- Khu vực nhập tin nhắn mới -->
+    <HBox spacing="10">
+        <TextField fx:id="messageField" promptText="Nhập tin nhắn..." HBox.hgrow="ALWAYS" />
+        <Button text="Gửi" fx:id="sendButton" onAction="#handleSendMessage" />
+        <Button text="Gửi File" onAction="#handleSendFile" />
+    </HBox>
+</VBox>

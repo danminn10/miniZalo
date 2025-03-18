@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.client.controller.SettingsController">
+    <Label text="Settings" style="-fx-font-size: 18;" />
+    <!-- Nội dung cài đặt -->
+</VBox>
